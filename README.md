@@ -1,1 +1,1 @@
-# -leitura
+# +leitura
