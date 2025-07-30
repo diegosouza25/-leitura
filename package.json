@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.4"
+  },
+  "name": "-leitura",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch":"jest --watch"
+
+  },
+  "author": "",
+  "license": "ISC"
+}
