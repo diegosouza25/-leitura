@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:9.5.25
+    container_name: db
+    environment:
+    - POSTGRES_PASSWORD=1324
+    - POSTGRES_USER=diego
+    - POSTGRES_DB=maisleitura
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
+    driver: local
