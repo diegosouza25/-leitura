@@ -2,25 +2,21 @@ services:
   db:
     image: postgres:9.5.25
     container_name: db
+    ports:
+      - 5432:5432
     environment:
-    - POSTGRES_PASSWORD=1324
-    - POSTGRES_USER=diego
-    - POSTGRES_DB=maisleitura
+      - POSTGRES_PASSWORD=0911
+      - POSTGRES_USER=diego
+      - POSTGRES_DB=maisleitura
     volumes:
-      - db_data:/var/lib/postgresql/data
-  pgadmin: 
-     image: dpage/pgadmin4:latest   
-     container_name: pgadmin
-     environment:
-     - PGAMIN_DEFUAL_EMAIL=email@email.com
-     - PGAMIN_DEFUAL_PASSWORD=123456@maisleitura
-     ports:
-       - 9000:80
-     volumes:
-       - pgadmin_data:/var/lid/pgadmin
-     depends_on:
-       - db
+      - db_data_x:/var/lib/postgresql/data
+  pgweb:
+    image: sosedoff/pgweb
+    ports:
+      - 8081:8081
+    depends_on:
+      - db
 
 volumes:
-  db_data:
-    driver: local  
+  db_data_x:
+    driver: local 
