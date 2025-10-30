@@ -13,18 +13,18 @@ export const up = (pgm) => {
 pgm.sql(`
 CREATE TABLE livro(
     id VARCHAR(36) PRIMARY KEY,
-    numero paginas INTEGER.
+    numero_paginas INTEGER,
     autor VARCHAR(255),
     titulo VARCHAR(100) NOT NULL,
     genero VARCHAR(100) NOT NULL,
-    data publicacao DATE,
+    data_publicacao DATE,
     isbm TEXT,
     resumo TEXT,
     imagem_capa TEXT,
     editora VARCHAR(255),
     disponibilidade boolean default true,
     tags TEXT,
-    preco NUMERIC(10. 2) default 0.0
+    preco NUMERIC(10, 2) default 0.0
 );  
 `)
 };
