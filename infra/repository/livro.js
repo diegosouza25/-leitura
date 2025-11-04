@@ -3,9 +3,9 @@ const { query} = require("../database");
 async function consultarTodos() {
     const sql = `SELECT * FROM livro`;
 
-    const reusltatodos = await query(sql)
+    const resultatodos = await query(sql)
 
-    return reusltatodos;
+    return resultatodos;
 
 }
-module.exports ={ consultarTodos };
+module.exports ={ consultarTodos , consultaTops};
