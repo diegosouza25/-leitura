@@ -8,4 +8,15 @@ async function consultarTodos() {
     return resultatodos;
 
 }
+
+
+async function consultaTops() {
+    const sql = `SELECT * FROM livro WHERE top_`;
+
+    const resultatodos = await query(sql)
+
+    return resultatodos;
+
+}
+
 module.exports ={ consultarTodos , consultaTops};
